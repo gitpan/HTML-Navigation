@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title> multi-level navigation test </title>
+
+  <style type="text/css">
+    .selected {
+      color: white;
+      background: blue;
+    }
+  </style>
+</head>
+
+<body>
+<ol start="0" type="1"> <!-- pre_items: item_0 -->
+  <li> <!-- pre_item: item_0 --> {
+  <A HREF="?first=item_0">item_0</A>
+  <!-- post_item: item_0 --> }
+
+  <!-- item_glue: item_0 --> 0+
+
+  <li> <!-- pre_item: item_1 class="not_leaf" --> {
+  <A HREF="?first=item_1">item_1 (not leaf)</A>
+  <!-- post_item: item_1 class="not_leaf" --> }
+    <ol start="0" type="a"> <!-- pre_items: 1_a -->
+      <li id="level 2"> <!-- pre_item: 1_a --> {
+      <A HREF="?first=item_1;submenu_1=1_a">1_a [level 2]</A>
+      <!-- post_item: 1_a --> }
+
+      <!-- item_glue: 1_a --> 1+
+
+      <li id="level 2"> <!-- pre_item: 1_b --> {
+      <A HREF="?first=item_1;submenu_1=1_b">1_b [level 2]</A>
+      <!-- post_item: 1_b --> }
+
+      <!-- item_glue: 1_b --> 1+
+
+      <li id="level 2"> <!-- pre_item: 1_c --> {
+      <span class="selected">1_c [level 2]</span>
+      <!-- post_item: 1_c --> }
+    </ol> <!-- post_items: 1_c -->
+  <li> <!-- pre_item: item_2 --> {
+  <A HREF="?first=item_2">item_2</A>
+  <!-- post_item: item_2 --> }
+
+  <!-- item_glue: item_2 --> 0+
+
+  <li> <!-- pre_item: item_3 --> {
+  <A HREF="?first=item_3;submenu_3=3_c">item_3</A>
+  <!-- post_item: item_3 --> }
+
+  <!-- item_glue: item_3 --> 0+
+
+  <li> <!-- pre_item: item_4 --> {
+  <A HREF="?first=item_4;submenu_4=4_a;submenu_4_a=4_a_II">item_4</A>
+  <!-- post_item: item_4 --> }
+</ol> <!-- post_items: item_4 -->
+
+</body>
+</html>

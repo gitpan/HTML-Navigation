@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title> multi-level navigation test </title>
+
+  <style type="text/css">
+    .selected {
+      color: white;
+      background: blue;
+    }
+  </style>
+</head>
+
+<body>
+<ol start="0" type="1"> <!-- pre_items: item_0 -->
+  <li> <!-- pre_item: item_0 --> {
+  <span class="selected">item_0</span>
+  <!-- post_item: item_0 --> }
+
+  <!-- item_glue: item_0 --> 0+
+
+  <li> <!-- pre_item: item_1 --> {
+  <A HREF="?first=item_1">item_1</A>
+  <!-- post_item: item_1 --> }
+
+  <!-- item_glue: item_1 --> 0+
+
+  <li> <!-- pre_item: item_2 --> {
+  <A HREF="?first=item_2">item_2</A>
+  <!-- post_item: item_2 --> }
+
+  <!-- item_glue: item_2 --> 0+
+
+  <li> <!-- pre_item: item_3 --> {
+  <A HREF="?first=item_3;submenu_3=3_c">item_3</A>
+  <!-- post_item: item_3 --> }
+
+  <!-- item_glue: item_3 --> 0+
+
+  <li> <!-- pre_item: item_4 --> {
+  <A HREF="?first=item_4;submenu_4=4_a;submenu_4_a=4_a_II">item_4</A>
+  <!-- post_item: item_4 --> }
+</ol> <!-- post_items: item_4 -->
+
+</body>
+</html>

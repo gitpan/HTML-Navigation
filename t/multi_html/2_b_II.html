@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title> multi-level navigation test </title>
+
+  <style type="text/css">
+    .selected {
+      color: white;
+      background: blue;
+    }
+  </style>
+</head>
+
+<body>
+<ol start="0" type="1"> <!-- pre_items: item_0 -->
+  <li> <!-- pre_item: item_0 --> {
+  <A HREF="?first=item_0">item_0</A>
+  <!-- post_item: item_0 --> }
+
+  <!-- item_glue: item_0 --> 0+
+
+  <li> <!-- pre_item: item_1 --> {
+  <A HREF="?first=item_1">item_1</A>
+  <!-- post_item: item_1 --> }
+
+  <!-- item_glue: item_1 --> 0+
+
+  <li> <!-- pre_item: item_2 class="not_leaf" --> {
+  <A HREF="?first=item_2">item_2 (not leaf)</A>
+  <!-- post_item: item_2 class="not_leaf" --> }
+    <ol start="0" type="a"> <!-- pre_items: 2_a -->
+      <li id="item 2 level 1"> <!-- pre_item: 2_a --> {
+      <A HREF="?first=item_2;submenu_2=2_a">2_a [item 2 level 1]</A>
+      <!-- post_item: 2_a --> }
+
+      <!-- item_glue: 2_a --> 1+
+
+      <li id="item 2 level 1"> <!-- pre_item: 2_b class="not_leaf" --> {
+      <A HREF="?first=item_2;submenu_2=2_b">2_b [item 2 level 1] (not leaf)</A>
+      <!-- post_item: 2_b class="not_leaf" --> }
+        <ol start="0" type="I"> <!-- pre_items: 2_b_I -->
+          <li id="item 2 level 2"> <!-- pre_item: 2_b_I --> {
+          <A HREF="?first=item_2;submenu_2=2_b;submenu_2_b=2_b_I">2_b_I [item 2 level 2]</A>
+          <!-- post_item: 2_b_I --> }
+
+          <!-- item_glue: 2_b_I --> 2+
+
+          <li id="item 2 level 2"> <!-- pre_item: 2_b_II --> {
+          <span class="selected">2_b_II [item 2 level 2]</span>
+          <!-- post_item: 2_b_II --> }
+        </ol> <!-- post_items: 2_b_II -->
+    </ol> <!-- post_items: 2_b -->
+  <li> <!-- pre_item: item_3 --> {
+  <A HREF="?first=item_3;submenu_3=3_c">item_3</A>
+  <!-- post_item: item_3 --> }
+
+  <!-- item_glue: item_3 --> 0+
+
+  <li> <!-- pre_item: item_4 --> {
+  <A HREF="?first=item_4;submenu_4=4_a;submenu_4_a=4_a_II">item_4</A>
+  <!-- post_item: item_4 --> }
+</ol> <!-- post_items: item_4 -->
+
+</body>
+</html>

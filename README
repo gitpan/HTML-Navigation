@@ -1,0 +1,55 @@
+README for HTML::Navigation
+
+                           HTML::Navigation
+                           ================
+
+HTML::Navigation is Perl module for creating navigation bars/menus of
+arbitrary design and structure within HTML documents.
+
+
+Shameless plug
+--------------
+
+This software was originally written for <http://www.fotografenguide.com/>,
+part of the <http://www.guideguide.com/> project.  If you like hacking Perl
+in a cool environment, come and work for us!
+
+Prerequisites
+-------------
+
+This suite requires Perl 5.004 or higher, and URI::Escape.
+
+Installation
+------------
+
+See INSTALL.
+
+Documentation
+-------------
+
+POD-format documentation is included in the modules.  POD is readable
+with the 'perldoc' utility.
+
+Support
+-------
+
+Questions, bug reports, useful code bits, and suggestions for
+HTML::Navigation should just be sent to me at <adam@spiers.net>.
+
+Availability
+------------
+
+The latest version of HTML::Navigation is available from
+
+  http://www.new.ox.ac.uk/~adam/computing/HTML-Navigation/
+
+or (a possibly slightly older version) from the Comprehensive Perl
+Archive Network (CPAN).  Visit <http://www.perl.com/CPAN> to find a
+CPAN site near you.
+
+Copyright
+---------
+
+(c) 2000, Adam Spiers <adam@spiers.net>, all rights reserved.
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.

@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title> multi-level navigation test </title>
+
+  <style type="text/css">
+    .selected {
+      color: white;
+      background: blue;
+    }
+  </style>
+</head>
+
+<body>
+<ol start="0" type="1"> <!-- pre_items: item_0 -->
+  <li> <!-- pre_item: item_0 --> {
+  <A HREF="?first=item_0">item_0</A>
+  <!-- post_item: item_0 --> }
+
+  <!-- item_glue: item_0 --> 0+
+
+  <li> <!-- pre_item: item_1 --> {
+  <A HREF="?first=item_1">item_1</A>
+  <!-- post_item: item_1 --> }
+
+  <!-- item_glue: item_1 --> 0+
+
+  <li> <!-- pre_item: item_2 --> {
+  <A HREF="?first=item_2">item_2</A>
+  <!-- post_item: item_2 --> }
+
+  <!-- item_glue: item_2 --> 0+
+
+  <li> <!-- pre_item: item_3 --> {
+  <A HREF="?first=item_3;submenu_3=3_c">item_3</A>
+  <!-- post_item: item_3 --> }
+
+  <!-- item_glue: item_3 --> 0+
+
+  <li> <!-- pre_item: item_4 class="not_leaf" --> {
+  <span class="selected">item_4 (not leaf)</span>
+  <!-- post_item: item_4 class="not_leaf" --> }
+    <ol start="0" type="a"> <!-- pre_items: 4_a -->
+      <li id="level 2"> <!-- pre_item: 4_a --> {
+      <A HREF="?first=item_4;submenu_4=4_a;submenu_4_a=4_a_II">4_a [level 2]</A>
+      <!-- post_item: 4_a --> }
+
+      <!-- item_glue: 4_a --> 1+
+
+      <li id="level 2"> <!-- pre_item: 4_b --> {
+      <A HREF="?first=item_4;submenu_4=4_b">4_b [unsel override]</A>
+      <!-- post_item: 4_b --> }
+
+      <!-- item_glue: 4_b --> 1+
+
+      <li id="level 2"> <!-- pre_item: 4_c class="not_leaf" --> {
+      <span class="selected">4_c [level 2] (not leaf)</span>
+      <!-- post_item: 4_c class="not_leaf" --> }
+        <ol start="0" type="I"> <!-- pre_items: 4_c_I -->
+          <li id="level 3"> <!-- pre_item: 4_c_I --> {
+          <A HREF="?first=item_4;submenu_4=4_c;submenu_4_c=4_c_I">4_c_I [unsel override 2]</A>
+          <!-- post_item: 4_c_I --> }
+
+          <!-- item_glue: 4_c_I --> 2+
+
+          <li id="level 3"> <!-- pre_item: 4_c_II --> {
+          <A HREF="?first=item_4;submenu_4=4_c;submenu_4_c=4_c_II">4_c_II [unsel override 2]</A>
+          <!-- post_item: 4_c_II --> }
+
+          <!-- item_glue: 4_c_II --> 2+
+
+          <li id="level 3"> <!-- pre_item: 4_c_III --> {
+          <A HREF="?first=item_4;submenu_4=4_c;submenu_4_c=4_c_III">4_c_III [unsel override 3]</A>
+          <!-- post_item: 4_c_III --> }
+        </ol> <!-- post_items: 4_c_III -->
+    </ol> <!-- post_items: 4_c -->
+</ol> <!-- post_items: item_4 -->
+
+</body>
+</html>

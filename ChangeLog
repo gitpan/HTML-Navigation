@@ -1,0 +1,112 @@
+2000-10-16  Adam Spiers  <adam@spiers.net>
+
+	* README:
+	document prerequisite URI::Escape
+
+	* Makefile.PL:
+	check for URI::Escape
+
+	* README:
+	get the right homepage URL
+
+	* Navigation.pm:
+	fix broken pod
+
+	* MANIFEST:
+	added example CGIs
+
+	* eg/two-level.cgi:
+	documentation and examples are more or less complete
+
+	* README:
+	URL tweaks
+
+	* eg/multi.cgi:
+	import
+
+	* eg/dynamic.cgi:
+	oops, wrong base_url
+
+	* eg/simple.cgi:
+	import
+
+2000-10-14  Adam Spiers  <adam@spiers.net>
+
+	* t/multi_html/none.html:
+	test files for multi_level structure
+
+	* t/output_html.pl:
+	import
+
+	* README:
+	needs 5.004 not 5.005
+
+2000-10-13  Adam Spiers  <adam@spiers.net>
+
+	* Navigation.pm:
+	fsck!!!  finally got it right?
+
+	* t/MyTest.pm:
+	4_a_II_only is now 4_a_II_A
+
+	* t/test.cgi:
+	loads of changes, /everything/ works now touch wood!
+
+2000-10-12  Adam Spiers  <adam@spiers.net>
+
+	* t/all.t:
+	multi_level testing works!
+
+	* Navigation.pm:
+	- rename and document query_string()
+	- dump_all_params() now returns array of arrayrefs
+
+	* Navigation.pm:
+	nailing those bugs - yeehah!
+
+	* Navigation.pm:
+	clearer variable names
+
+	* Navigation.pm:
+	makes more sense for _process_item to return '' here
+
+	* Navigation.pm:
+	further shrinkage.  It's getting dangerously legible now.
+
+	* Navigation.pm:
+	trying to shrink some of these huge subroutines
+
+	* t/all.t:
+	get basic tests working again
+
+	* Navigation.pm:
+	- remove extraneous variables
+	- ignore_defaults
+	- add bug
+
+	* MANIFEST:
+	added new files
+
+	* Navigation.pm:
+	- added dump_all_params() (not quite working with defaults yet)
+	- refactoring
+
+	* t/test.cgi:
+	import
+
+	* t/all.t:
+	move stuff to MyTest.pm so we can reuse it with a test CGI
+
+	* t/MyCompare.pm:
+	add a hash bang line
+
+	* Navigation.pm:
+	- more pod
+	- base_url method
+	- fix callbacks inheritance
+
+2000-10-09  Adam Spiers  <adam@spiers.net>
+
+	* t/all.t:
+	initial import
+
