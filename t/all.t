@@ -5,7 +5,7 @@ use Test;
 
 use lib './t';
 use MyCompare qw(equal_arrays);
-use MyTest qw(log_test callbacks callback html_page cat
+use MyTest qw(log_test callbacks callback html_page cat uc_href
               multi_level multi_page multi_filename);
 
 # First check that the module loads OK.
@@ -193,7 +193,7 @@ foreach my $param_set ([], @param_sets) {
   my $query_string = $multi->query_string($param_set) || 'none';
   my $filename = multi_filename($query_string);
 
-  ok(multi_page($multi->output({ @$param_set })), cat("t/$filename"));
+  ok(multi_page(uc_href($multi->output({ @$param_set }))), cat("t/$filename"));
 }
 
 exit 0;
@@ -206,7 +206,7 @@ sub test_single_level {
   my %sel = ();
 
   log_test "  with none selected\n";
-  ok($nav->output({}), $none);
+  ok(uc_href($nav->output({})), $none);
    
   foreach my $item (@items) {
     log_test "  with `$item' selected\n";
@@ -214,6 +214,6 @@ sub test_single_level {
     ($sel{$item} = $none)
       =~ s!<A\ HREF="\?first=\Q$enc_item\E">\Q$item\E</A>
           !<span class="selected">$item</span>!mx;
-    ok($nav->output({ first => $item }), $sel{$item});
+    ok(uc_href($nav->output({ first => $item })), $sel{$item});
   }
 }

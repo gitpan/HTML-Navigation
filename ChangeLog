@@ -1,3 +1,11 @@
+2000-10-24  Adam Spiers  <adam@spiers.net>
+
+	* Navigation.pm:
+	version 0.26
+
+	* t/all.t:
+	fix for newer versions of CGI::a() which generate <a href> rather than <A HREF>
+
 2000-10-16  Adam Spiers  <adam@spiers.net>
 
 	* README:

@@ -7,13 +7,13 @@
 # reserved. This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
-# $Id: Navigation.pm,v 1.15 2000/10/16 18:06:45 adam Exp $
+# $Id: Navigation.pm,v 1.16 2000/10/24 16:00:32 adam Exp $
 #
 
 package HTML::Navigation;
 
 use vars qw($VERSION);
-$VERSION = '0.25';
+$VERSION = '0.26';
 
 require 5.004;
 

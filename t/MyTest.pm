@@ -10,7 +10,7 @@ use Exporter;
 use vars qw(@ISA @EXPORT_OK);
 @ISA = qw(Exporter);
 
-@EXPORT_OK = qw(log_test callbacks callback html_page cat
+@EXPORT_OK = qw(log_test callbacks callback html_page cat uc_href
                 multi_level multi_page multi_filename);
 
 sub log_test (@) {
@@ -239,4 +239,11 @@ sub cat {
     die "Couldn't open `$filename': $!";
     return undef;
   }
+}
+
+sub uc_href {
+  my ($text) = @_;
+  $text =~ s/<a HrEf=/<A HREF=/gi;
+  $text =~ s!</a>!</A>!gi;
+  return $text;
 }
